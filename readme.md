@@ -16,8 +16,6 @@ See my notion notes for any context or theory: https://www.notion.so/Reinforceme
 | Breakout | The Breakout simulation is a classic arcade game where the player controls a paddle to bounce a ball and break bricks. The goal is to clear all the bricks by hitting them with the ball. | ❌ |
 | Pong | The Pong simulation is a classic arcade game where the player controls a paddle to hit a ball back and forth with an opponent. The goal is to score points by making the opponent miss the ball. | ❌ |
 
-## Algorithms
-
 ## Algorithms
 
 | Algorithm | Implemented Simulations |
