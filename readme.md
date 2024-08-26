@@ -15,12 +15,14 @@ See my notion notes for any context or theory: https://www.notion.so/Reinforceme
 | Taxi | The Taxi simulation is a grid-based environment where an agent acts as a taxi driver. The agent's goal is to pick up passengers and drop them off at their desired locations while following traffic rules. | ❌ |
 | Breakout | The Breakout simulation is a classic arcade game where the player controls a paddle to bounce a ball and break bricks. The goal is to clear all the bricks by hitting them with the ball. | ❌ |
 | Pong | The Pong simulation is a classic arcade game where the player controls a paddle to hit a ball back and forth with an opponent. The goal is to score points by making the opponent miss the ball. | ❌ |
+| Seven state random walk | A 7 state random walk wherein we can go up and down at a fixed probability. | ✅ |
 
 ## Algorithms
 
 | Algorithm | Implemented Simulations |
 |-----------|-----------------------|
 | Policy iteration | Gamblers problem |
+| Fixed alpha Monte-Carlo evaluation | Seven state random walk |
 | Q-Learning |  |
 | SARSA     |   |
 | DQN       |    |
