@@ -4,6 +4,14 @@ Welcome to my repository in which I experiment with reinforcement learning techn
 
 See my notion notes for any context or theory: https://www.notion.so/Reinforcement-learning-dd3a6c0bda69465dabea123a30007bd8?pvs=4.
 
+## Getting set up
+
+I've made a speedier way to get set up using a shell file to make a venv and install all requirements into it.
+
+```sh
+source setup_venv.sh
+```
+
 ## Simulations
 
 | Simulations | Description | Implemented |
