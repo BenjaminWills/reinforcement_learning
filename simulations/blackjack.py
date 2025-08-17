@@ -1,6 +1,8 @@
 import random
 from typing import List, Dict, Tuple, Literal
 
+from copy import copy
+
 CARD = str
 DECK = List[CARD]
 HAND = List[CARD]
@@ -19,7 +21,8 @@ POSSIBLE_ACTIONS = ["hit", "stick"]
 REWARDS = [-1, 0, 1]
 DISCOUNT_FACTOR = 1
 
-deck = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+deck = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J",
+        "Q", "K", "A"] * 4  # A deck is four lots of these
 deck_values = {
     "2": 2,
     "3": 3,
@@ -47,6 +50,12 @@ def draw_card(deck: DECK) -> CARD:
     Returns:
         CARD: The drawn card.
     """
+    # Draw a random card
+    drawn_card = random.choice(deck)
+
+    # Remove that card from the deck
+    # .remove() will remove ONE occurrence of the stated index
+    deck.remove(drawn_card)
     return random.choice(deck)
 
 
@@ -115,6 +124,9 @@ def play_game_without_strategy(deck: DECK, deck_values: Dict[str, int]) -> int:
     Returns:
         int: The victory condition of the game (-1 for player loss, 0 for draw, 1 for player win).
     """
+    # Make a copy of the deck so that it resets after each game
+    deck = copy(deck)
+
     # Deal the cards
     player_hand = [draw_card(deck) for _ in range(2)]
     dealer_hand = [draw_card(deck) for _ in range(2)]
@@ -151,6 +163,9 @@ def play_game_with_strategy(
     Returns:
         Tuple[int, List[Tuple[STATE, ACTIONS]]]: The victory condition of the game and the history of state-action pairs.
     """
+    # Make a copy of the deck so that it resets after each game
+    deck = copy(deck)
+
     # Deal the cards
     player_hand = [draw_card(deck) for _ in range(2)]
     dealer_hand = [draw_card(deck) for _ in range(2)]
