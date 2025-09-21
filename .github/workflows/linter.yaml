@@ -4,8 +4,8 @@ on:
   pull_request:
     branches:
       - main
-  file:
-    - '*.py'
+    paths:
+      - '**.py'
 
 jobs:
   lint:
