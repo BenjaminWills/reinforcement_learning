@@ -142,7 +142,7 @@ def constant_alpha_montecarlo(
     """
     # Initialse values
     soft_policy = initialise_epsilon_soft_policy(deck)
-    soft_policy_function = lambda state: soft_policy[state]
+    def soft_policy_function(state): return soft_policy[state]
     action_value_function = initialise_action_value_function(deck)
 
     for episode in tqdm(range(episodes)):
@@ -155,7 +155,7 @@ def constant_alpha_montecarlo(
                 outcome - action_value_function[(state, action)]
             )
 
-        soft_policy_function = lambda state: epsilon_greedy_policy(
+        def soft_policy_function(state): return epsilon_greedy_policy(
             state, action_value_function, epsilon
         )
 
